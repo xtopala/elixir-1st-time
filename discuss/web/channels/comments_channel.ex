@@ -15,8 +15,6 @@ defmodule Discuss.CommentsChannel do
 
   def handle_in(name, %{"content" => content}, socket) do
     topic = socket.assigns.topic
-    IO.puts("++++")
-    IO.inspect(socket)
     user_id = socket.assigns.user_id
 
     changeset =
